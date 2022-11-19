@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #3a4764;
+  font-size: 10px;
+  display: flex;
+  justify-content: center; }
+
+.calculator {
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'League Spartan';
+  font-weight: 700;
+  max-width: 1440px; }
+  .calculator-header {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 54rem;
+    height: 4.4rem; }
+    .calculator-header-text {
+      color: white;
+      font-size: 3.2rem; }
+    .calculator-header-theme {
+      display: flex; }
+      .calculator-header-theme-text {
+        color: white;
+        font-size: 1.2rem;
+        letter-spacing: 1px; }
+      .calculator-header-theme-toggle {
+        width: 7.1rem;
+        margin-left: 3rem; }
+        .calculator-header-theme-toggle-numbers {
+          padding: 0 6px;
+          display: flex;
+          justify-content: space-between;
+          color: white;
+          font-size: 1.2rem;
+          margin-bottom: 5px; }
+          .calculator-header-theme-toggle-numbers p {
+            margin: 0 10px; }
+        .calculator-header-theme-toggle-switch {
+          padding: 0 8px;
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          align-items: center;
+          width: 7.1rem;
+          height: 2.6rem;
+          border-radius: 1.3rem;
+          background-color: #232c43; }
+          .calculator-header-theme-toggle-switch-button {
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            background-color: #d03f2f; }
+          .calculator-header-theme-toggle-switch-button:hover {
+            cursor: pointer;
+            background-color: #d96659; }
+  .calculator-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    padding-right: 32px;
+    justify-content: end;
+    align-items: center;
+    background-color: #182034;
+    width: 54rem;
+    height: 12.8rem;
+    border-radius: 1rem; }
+    .calculator-display-text {
+      color: white;
+      font-size: 5.6rem; }
+  .calculator-keypad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+    padding: 3rem;
+    margin-top: 2.4rem;
+    background-color: #232c43;
+    width: 54rem;
+    height: 48rem;
+    border-radius: 1rem; }
+
+.button {
+  font-size: 4rem;
+  font-weight: 700;
+  border-width: 0px;
+  background-color: #eae3dc;
+  width: 10.1rem;
+  height: 6.4rem;
+  border-radius: 1rem;
+  color: #444b5a;
+  box-shadow: inset 0px -0.4rem 0px #b3a497; }
+
+.button:hover {
+  cursor: pointer;
+  background-color: #fdfcfc; }
+
+.wide {
+  width: 22.7rem; }
+
+.red {
+  background-color: #d03f2f;
+  box-shadow: inset 0px -0.4rem 0px #93261a; }
+
+.red:hover {
+  background-color: #d96659; }
+
+.blue {
+  background-color: #637097;
+  box-shadow: inset 0px -0.4rem 0px #404e72; }
+
+.blue:hover {
+  background-color: #808bac; }
+
+.small-text {
+  color: white;
+  font-size: 2.8rem; }
