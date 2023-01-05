@@ -4,7 +4,7 @@ import Header from './Header';
 import Display from './Display';
 import Keypad from './Keypad';
 
-export default function Calculator() {
+export default function Calculator(props) {
   const [display, setDisplay] = useState(0);
   const [value1, setValue1] = useState(0);
   const [value2, setValue2] = useState(0);
@@ -71,7 +71,7 @@ export default function Calculator() {
   }
   return (
     <div className='calculator'>
-      <Header />
+      <Header toggle={props.toggle} />
       <Display value={display} />
       <Keypad buttonClick={handleClick} />
     </div>

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+// COLORS THEME 1 //
+// Backgrounds
+$theme-1-main-background: hsl(222, 26%, 31%);
+$theme-1-keypad-background: hsl(223, 31%, 20%);
+$theme-1-screen-background: hsl(224, 36%, 15%);
+// Keys
+$theme-1-key-blue-background: hsl(225, 21%, 49%);
+$theme-1-key-blue-shadow: hsl(224, 28%, 35%);
+$theme-1-key-red-background: hsl(6, 63%, 50%);
+$theme-1-key-red-shadow: hsl(6, 70%, 34%);
+$theme-1-key-gray-background: hsl(30, 25%, 89%);
+$theme-1-key-gray-shadow: hsl(28, 16%, 65%);
+// Text
+$theme-1-text-blue: hsl(221, 14%, 31%);
+$theme-1-text-white: hsl(0, 0, 100%);
+// COLORS THEME 2 //
+// Backgrounds
+$theme-2-main-background: hsl(0, 0%, 90%);
+$theme-2-keypad-background: hsl(0, 5%, 81%);
+$theme-2-screen-background: hsl(0, 0%, 93%);
+// Keys
+$theme-2-key-cyan-background: hsl(185, 42%, 37%);
+$theme-2-key-cyan-shadow: hsl(185, 58%, 25%);
+$theme-2-key-orange-background: hsl(25, 98%, 40%);
+$theme-2-key-orange-shadow: hsl(25, 99%, 27%);
+$theme-2-key-gray-background: hsl(45, 7%, 89%);
+$theme-2-key-gray-shadow: hsl(35, 11%, 61%);
+// Text
+$theme-2-text-gray: hsl(60, 10%, 19%);
+$theme-2-text-white: hsl(0, 0, 100%);
+$theme-3-main-background: hsl(268, 75%, 9%);
+$theme-3-keypad-background: hsl(268, 71%, 12%);
+// Keys
+$theme-3-key-purple-background: hsl(281, 89%, 26%);
+$theme-3-key-purple-shadow: hsl(285, 91%, 52%);
+$theme-3-key-cyan-background: hsl(177, 92%, 70%);
+$theme-3-key-cyan-shadow: hsl(25, 99%, 27%);
+$theme-3-key-purple-background: hsl(268, 47%, 21%);
+$theme-3-key-purple-shadow: hsl(290, 70%, 36%);
+// Text
+$theme-3-text-yellow: hsl(52, 100%, 62%);
+$theme-3-text-blue: hsl(198, 20%, 13%);
+$theme-3-text-white: hsl(0, 0, 100%);
+
+#theme1 {
+  background-color: $theme-1-main-background;
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+
+  .calculator {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'League Spartan';
+    font-weight: 700;
+    max-width: 1440px;
+    &-header {
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 54rem;
+      height: 4.4rem;
+      &-text {
+        color: white;
+        font-size: 3.2rem;
+      }
+      &-theme {
+        display: flex;
+        &-text {
+          color: white;
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+        }
+        &-toggle {
+          width: 7.1rem;
+          margin-left: 3rem;
+          &-numbers {
+            padding: 0 6px;
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            p {
+              margin: 0 10px;
+            }
+          }
+          &-switch {
+            padding: 0 8px;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            width: 7.1rem;
+            height: 2.6rem;
+            border-radius: 1.3rem;
+            background-color: $theme-1-keypad-background;
+            &-button {
+              width: 1.6rem;
+              height: 1.6rem;
+              border-radius: 50%;
+              background-color: $theme-1-key-red-background;
+            }
+            &-button:hover {
+              cursor: pointer;
+              background-color: lighten($theme-1-key-red-background, 10%);
+            }
+          }
+        }
+      }
+    }
+    &-display {
+      display: flex;
+      justify-content: space-between;
+      align-items: space-between;
+      padding-right: 32px;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: $theme-1-screen-background;
+      width: 54rem;
+      height: 12.8rem;
+      border-radius: 1rem;
+      &-text {
+        color: hsl(0, 0, 100%);
+        font-size: 5.6rem;
+      }
+    }
+    &-keypad {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: space-between;
+      padding: 3rem;
+      margin-top: 2.4rem;
+      background-color: $theme-1-keypad-background;
+      width: 54rem;
+      height: 48rem;
+      border-radius: 1rem;
+    }
+  }
+
+  .button {
+    font-size: 4rem;
+    font-weight: 700;
+    border-width: 0px;
+    background-color: $theme-1-key-gray-background;
+    width: 10.1rem;
+    height: 6.4rem;
+    border-radius: 1rem;
+    color: $theme-1-text-blue;
+    box-shadow: inset 0px -0.4rem 0px #b3a497;
+  }
+
+  .button:hover {
+    cursor: pointer;
+    background-color: lighten($theme-1-key-gray-background, 10%);
+  }
+
+  .wide {
+    width: 22.7rem;
+  }
+
+  .red {
+    background-color: $theme-1-key-red-background;
+    box-shadow: inset 0px -0.4rem 0px #93261a;
+  }
+
+  .red:hover {
+    background-color: lighten($theme-1-key-red-background, 10%);
+  }
+
+  .blue {
+    background-color: $theme-1-key-blue-background;
+    box-shadow: inset 0px -0.4rem 0px $theme-1-key-blue-shadow;
+  }
+
+  .blue:hover {
+    background-color: lighten($theme-1-key-blue-background, 10%);
+  }
+
+  .small-text {
+    color: white;
+    font-size: 2.8rem;
+  }
+}

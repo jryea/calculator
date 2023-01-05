@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import { createContext, useState } from 'react';
 import './App.css';
+import Calculator from './Components/Calculator';
+
+// export const ThemeContext = createContext(null);
 
 function App() {
+  const [theme, setTheme] = useState('theme1');
+
+  function handleToggle() {
+    setTheme((prevState) => {
+      if (prevState === 'theme1') return 'theme2';
+      else if (prevState === 'theme2') return 'theme3';
+      else if (prevState === 'theme3') return 'theme1';
+    });
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // <ThemeContext.Provider value={{ theme, handleToggle }}>
+    <div id={theme} className='background'>
+      <Calculator toggle={handleToggle} />
     </div>
+    // </ThemeContext.Provider>
   );
 }
-
 export default App;
