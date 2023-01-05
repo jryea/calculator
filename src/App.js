@@ -16,11 +16,9 @@ function App() {
   }
 
   return (
-    // <ThemeContext.Provider value={{ theme, handleToggle }}>
     <div id={theme} className='background'>
       <Calculator toggle={handleToggle} />
     </div>
-    // </ThemeContext.Provider>
   );
 }
 export default App;
