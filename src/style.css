@@ -2,11 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+html {
+  font-size: 62.5%; }
+
 #theme1 {
   background-color: #3a4764;
   width: 100%;
   height: 200vh;
-  font-size: 10px;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -98,10 +100,14 @@
     height: 6.4rem;
     border-radius: 1rem;
     color: #444b5a;
-    box-shadow: inset 0px -0.4rem 0px #b3a497; }
+    box-shadow: inset 0px -0.4rem 0px #b3a497;
+    transition: all 0.05s; }
   #theme1 .button:hover {
     cursor: pointer;
     background-color: #fdfcfc; }
+  #theme1 .button:active {
+    box-shadow: inset 0px -0.3rem 0px #b3a497;
+    transform: translatey(0.1rem); }
   #theme1 .wide {
     width: 22.7rem; }
   #theme1 .red {
@@ -109,9 +115,13 @@
     box-shadow: inset 0px -0.4rem 0px #93261a; }
   #theme1 .red:hover {
     background-color: #d96659; }
+  #theme1 .red:active {
+    box-shadow: inset 0px -0.3rem 0px #93261a; }
   #theme1 .blue {
     background-color: #637097;
     box-shadow: inset 0px -0.4rem 0px #404e72; }
+  #theme1 .blue:active {
+    box-shadow: inset 0px -0.3rem 0px #404e72; }
   #theme1 .blue:hover {
     background-color: #808bac; }
   #theme1 .small-text {
@@ -333,7 +343,7 @@
     box-shadow: inset 0px -0.4rem 0px #881c9e; }
   #theme3 .button:hover {
     cursor: pointer;
-    background-color: #fdfcfc; }
+    background-color: #4c2a72; }
   #theme3 .wide {
     width: 22.7rem; }
   #theme3 .red {

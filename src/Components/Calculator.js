@@ -33,6 +33,7 @@ export default function Calculator(props) {
         setDisplay(0);
         console.log(operand);
       }
+
       if (key === 'Enter') {
         console.log(operand);
         switch (operand) {

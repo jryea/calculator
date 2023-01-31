@@ -44,11 +44,14 @@ $theme-3-text-yellow: hsl(52, 100%, 62%);
 $theme-3-text-blue: hsl(198, 20%, 13%);
 $theme-3-text-white: hsl(0, 0, 100%);
 
+html {
+  font-size: 62.5%;
+}
+
 #theme1 {
   background-color: $theme-1-main-background;
   width: 100%;
   height: 200vh;
-  font-size: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -157,11 +160,17 @@ $theme-3-text-white: hsl(0, 0, 100%);
     border-radius: 1rem;
     color: $theme-1-text-blue;
     box-shadow: inset 0px -0.4rem 0px #b3a497;
+    transition: all 0.05s;
   }
 
   .button:hover {
     cursor: pointer;
     background-color: lighten($theme-1-key-gray-background, 10%);
+  }
+
+  .button:active {
+    box-shadow: inset 0px -0.3rem 0px #b3a497;
+    transform: translatey(0.1rem);
   }
 
   .wide {
@@ -177,9 +186,17 @@ $theme-3-text-white: hsl(0, 0, 100%);
     background-color: lighten($theme-1-key-red-background, 10%);
   }
 
+  .red:active {
+    box-shadow: inset 0px -0.3rem 0px #93261a;
+  }
+
   .blue {
     background-color: $theme-1-key-blue-background;
     box-shadow: inset 0px -0.4rem 0px $theme-1-key-blue-shadow;
+  }
+
+  .blue:active {
+    box-shadow: inset 0px -0.3rem 0px $theme-1-key-blue-shadow;
   }
 
   .blue:hover {
