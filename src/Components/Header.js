@@ -1,7 +1,7 @@
 import React from 'react';
 import ToggleSwitch from './ToggleSwitch';
 
-export default function Header(props) {
+export default function Header({ toggle }) {
   return (
     <div className='calculator-header'>
       <h2 className='calculator-header-text'>calc</h2>
@@ -13,7 +13,7 @@ export default function Header(props) {
             <p>2</p>
             <p>3</p>
           </div>
-          <ToggleSwitch toggle={props.toggle} />
+          <ToggleSwitch toggle={toggle} />
         </div>
       </div>
     </div>

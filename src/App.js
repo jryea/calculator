@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div id={theme} className='background'>
-      <Calculator toggle={handleToggle} />
+      <Calculator toggleTheme={handleToggle} />
     </div>
   );
 }

@@ -122,18 +122,22 @@ html {
     }
     &-display {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      align-items: space-between;
-      padding-right: 32px;
-      justify-content: flex-end;
-      align-items: center;
+      padding: 16px 32px;
+      align-items: flex-end;
       background-color: $theme-1-screen-background;
       width: 54rem;
       height: 12.8rem;
       border-radius: 1rem;
       &-text {
-        color: hsl(0, 0, 100%);
+        color: hsla(0deg, 100%, 100%, 1);
         font-size: 5.6rem;
+        justify-self: flex-end;
+      }
+      &-expression {
+        color: hsla(0deg, 100%, 100%, 0.5);
+        font-size: 2.4rem;
       }
     }
     &-keypad {
