@@ -1,14 +1,22 @@
 import React from 'react';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useContext } from 'react';
+
+import { ThemeContext } from '../ThemeProvider';
+
+import styled from 'styled-components';
+
 import Header from './Header';
 import Display from './Display';
 import Keypad from './Keypad';
 
-export default function Calculator({ toggleTheme }) {
+function Calculator({ toggleTheme }) {
+  const { colors } = useContext(ThemeContext);
   const [expression, setExpression] = useState('');
   const [totalValue, setTotalValue] = useState('');
   const [display, setDisplay] = useState('');
   const [currentValue, setCurrentValue] = useState('');
+
+  const styles = { '--color': `${colors.mainBackground}` };
 
   // const [value1, setValue1] = useState(0);
   // const [value2, setValue2] = useState(0);
@@ -127,10 +135,32 @@ export default function Calculator({ toggleTheme }) {
   }
 
   return (
-    <div className='calculator'>
-      <Header toggle={toggleTheme} />
-      <Display displayMain={display} displayExpression={expression} />
-      <Keypad buttonClick={handleClick} />
-    </div>
+    <Wrapper style={styles}>
+      <CalculatorElem>
+        <Header toggle={toggleTheme} />
+        <Display displayMain={display} displayExpression={expression} />
+        <Keypad handleClick={handleClick} />
+      </CalculatorElem>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  background-color: var(--color);
+  width: 100%;
+  height: 200vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const CalculatorElem = styled.div`
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  max-width: 1440px;
+  margin-top: 6rem;
+`;
+
+export default Calculator;

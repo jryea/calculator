@@ -1,24 +1,23 @@
-import { createContext, useState } from 'react';
+import { useContext } from 'react';
+import styled from 'styled-components';
 import './App.css';
+import ThemeProvider from './ThemeProvider';
 import Calculator from './Components/Calculator';
-
-// export const ThemeContext = createContext(null);
+import Button from './Components/Button';
+import Keypad from './Components/Keypad';
+import Header from './Components/Header';
+import Display from './Components/Display';
+import ToggleSwitch from './Components/ToggleSwitch';
+import GlobalStyles from './GlobalStyles';
 
 function App() {
-  const [theme, setTheme] = useState('theme1');
-
-  function handleToggle() {
-    setTheme((prevState) => {
-      if (prevState === 'theme1') return 'theme2';
-      else if (prevState === 'theme2') return 'theme3';
-      else if (prevState === 'theme3') return 'theme1';
-    });
-  }
-
   return (
-    <div id={theme} className='background'>
-      <Calculator toggleTheme={handleToggle} />
-    </div>
+    <ThemeProvider>
+      <Calculator />
+      <GlobalStyles />
+      <GlobalStyles />
+    </ThemeProvider>
   );
 }
+
 export default App;
